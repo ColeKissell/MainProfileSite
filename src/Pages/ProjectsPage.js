@@ -1,5 +1,5 @@
 import React from 'react'
-
+import VerticalLinearStepper from '../TimeLineStepper'
 
 export default class ProjectsPage extends React.Component {
 
@@ -7,6 +7,8 @@ export default class ProjectsPage extends React.Component {
         return(
             <div>
                 Here is the Projects page
+
+                <VerticalLinearStepper></VerticalLinearStepper>
             </div>
         )
     }

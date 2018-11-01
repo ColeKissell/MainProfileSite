@@ -11,15 +11,4 @@ const BasicExample = () => (
   </Router>
 );
 
-// export class Home extends React.Component {
-
-//     render(){
-//         return(
-//             <div>
-//                 Here is the home page
-//             </div>
-//         )
-//     }
-
-// }
 export default BasicExample;
