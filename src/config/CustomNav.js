@@ -18,6 +18,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 
 
+// need to add scrollability in addition to clicking buttons
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -27,7 +29,9 @@ const styles = theme => ({
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,})
+            duration: theme.transitions.duration.leavingScreen,}),
+            backgroundColor: "skyblue",
+            
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -70,8 +74,8 @@ const styles = theme => ({
     },
     contentShift: {
         transition: theme.transitions.create('margin', {
-          easing: theme.transitions.easing.easeOut,
-          duration: theme.transitions.duration.enteringScreen,
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
     },
@@ -86,7 +90,7 @@ class PersistantDrawer extends React.Component {
 
     handleDrawerOpen = () => {
         this.setState({ open: true });
-      };
+    };
     handleDrawerClose = () => {
     this.setState({ open: false });
     };
@@ -101,6 +105,7 @@ class PersistantDrawer extends React.Component {
             <CssBaseline />
               <AppBar
                 position="fixed"
+                color="inherit"
                 className={classNames(classes.appBar, {
                   [classes.appBarShift]: open,
                 })}>
@@ -113,7 +118,7 @@ class PersistantDrawer extends React.Component {
                     <MenuIcon />
                   </IconButton>
                   <Typography variant="h6" color="inherit" noWrap>
-                    Nicole's Site
+                    Nicole Kissell
                   </Typography>
                 </Toolbar>
               </AppBar>
@@ -142,6 +147,9 @@ class PersistantDrawer extends React.Component {
                     </ListItem>
                     <ListItem>
                         <Link to="/ProjectsPage">Projects</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/Resume">Resume</Link>
                     </ListItem>
                 </List>
 

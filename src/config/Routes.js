@@ -1,10 +1,10 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component, Fragment} from 'react';
 import { Route } from "react-router-dom";
 import About from "../Pages/About";
-import Contact from "../Pages/Contact"
-import ProjectsPage from "../Pages/ProjectsPage"
+import Contact from "../Pages/Contact";
+import ProjectsPage from "../Pages/ProjectsPage";
 // import Home from "../Pages/Home"
-
+import Resume from '../Pages/Resume';
 export default class extends Component {
     render() {
         return (
@@ -13,7 +13,7 @@ export default class extends Component {
                 <Route path="/About" component={About} />
                 <Route path="/Contact" component={Contact}/>
                 <Route path="/ProjectsPage" component={ProjectsPage}/>
-
+                <Route path='/Resume' component={Resume}/>
             </Fragment>
         )
     }

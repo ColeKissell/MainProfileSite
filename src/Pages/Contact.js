@@ -5,7 +5,7 @@ export default class Contact extends React.Component {
     render(){
         return(
             <div>
-                Here is the contact page
+                You can contact me at colekissell@gmail.com
             </div>
         )
     }
