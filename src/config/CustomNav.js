@@ -16,9 +16,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-
-
-// need to add scrollability in addition to clicking buttons
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+// need to add scrollability in addition to clicking buttons for navigation
 
 const drawerWidth = 240;
 
@@ -80,7 +80,6 @@ const styles = theme => ({
         }),
         marginLeft: 0,
     },
-
 });
 
 
@@ -121,7 +120,15 @@ class PersistantDrawer extends React.Component {
                   <Typography variant="h6" color="inherit" noWrap>
                     Nicole Kissell
                   </Typography>
+                    <Tabs>
+                        <Tab label="Home" component={Link} to="/"></Tab>
+                        <Tab label="About Me" component={Link} to="/about"></Tab>
+                        <Tab label="Contact Me" component={Link} to="/Contact"></Tab>
+                        <Tab label="Projects" component={Link} to="/ProjectsPage"></Tab>
+                        <Tab label="Resume" component={Link} to="/Resume"></Tab>
+                    </Tabs>
                 </Toolbar>
+
               </AppBar>
               <Drawer
                 className={classes.drawer}
@@ -159,8 +166,7 @@ class PersistantDrawer extends React.Component {
         <main
           className={classNames(classes.content, {
             [classes.contentShift]: open,
-          })}
-        >
+          })}>
           <div className={classes.drawerHeader} />
           <Routes/>
 
