@@ -25,13 +25,13 @@ const drawerWidth = 240;
 const styles = theme => ({
     root: {
         display: 'flex',
+        flexGrow: 1,
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,}),
             backgroundColor: "skyblue",
-            opacity: 50,
             
     },
     appBarShift: {
@@ -120,7 +120,11 @@ class PersistantDrawer extends React.Component {
                   <Typography variant="h6" color="inherit" noWrap>
                     Nicole Kissell
                   </Typography>
-                    <Tabs>
+                    <Tabs
+                        centered
+                        scrollable 
+                        scrollButtons="auto"
+                    >
                         <Tab label="Home" component={Link} to="/"></Tab>
                         <Tab label="About Me" component={Link} to="/about"></Tab>
                         <Tab label="Contact Me" component={Link} to="/Contact"></Tab>
