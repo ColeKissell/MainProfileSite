@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Carosel from '../Carosel'
+import Carosel from '../Components/Carosel'
 
 export default class About extends React.Component {
 
