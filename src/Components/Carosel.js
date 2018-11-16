@@ -146,7 +146,7 @@ class Carosel extends React.PureComponent {
                                 Robotics
                             </li>
                             <li>
-                                music
+                                Music
                             </li>
                             <li>
                                 Engineering

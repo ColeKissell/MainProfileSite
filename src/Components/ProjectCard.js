@@ -26,34 +26,30 @@ const styles = {
   },
 };
 
+
+// need to add a function to fill out the card based on props passed to the class
+
+
 function SimpleCard(props) {
   const { classes } = props;
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be
-          {bull}
-          nev
-          {bull}o{bull}
-          lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
+          Team Show Project
         </Typography>
         <Typography component="p">
-          well meaning and kindly.
+          A work in progress. We attempted to build a show management system. This is connected to a database and an API.
           <br />
-          {'"a benevolent smile"'}
+          the link is: https://team-this-store.netlify.com/
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <a href="https://team-this-store.netlify.com/" target='_blank' rel="noopener noreferrer">
+          <Button size="small">Learn More</Button>
+        </a>
+        
       </CardActions>
     </Card>
   );
