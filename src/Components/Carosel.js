@@ -173,7 +173,7 @@ class Carosel extends React.PureComponent {
                                 In Progress
                             </li>
                             <li>
-                                JATC (Jordan Applied Technology Center) Engineering Graduate
+                                JATC Engineering Graduate
                             </li>
                             <li>
                                 Alta High School Graduate
@@ -209,4 +209,3 @@ const Col = props => (
 //     );
 // };
 export default Carosel;
-// ReactDOM.render(<Carosel />, document.getElementById("Demo"));

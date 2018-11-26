@@ -18,11 +18,28 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-// need to add scrollability in addition to clicking buttons for navigation
+// import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
+// const theme = createMuiTheme();
 const drawerWidth = 240;
 
 const styles = theme => ({
+    typography: {
+        // Use the system font instead of the default Roboto font.
+        useNextVariants: true,
+        fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+      },
     root: {
         display: 'flex',
         flexGrow: 1,
@@ -117,11 +134,10 @@ class PersistantDrawer extends React.Component {
                     className={classNames(classes.menuButton, open && classes.hide)}>
                     <MenuIcon />
                   </IconButton>
-                  <Typography variant="h6" color="inherit" noWrap>
+                  <Typography className={classes.typography} variant="h6" color="inherit" noWrap>
                     Nicole Kissell
                   </Typography>
                     <Tabs
-                        centered
                         scrollable 
                         scrollButtons="auto"
                     >

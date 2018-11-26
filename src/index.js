@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import BasicNav from './Pages/Home'
-import * as serviceWorker from './serviceWorker';
+import BasicNav from './Pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'typeface-roboto';
+import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(<BasicNav/>, document.getElementById('root'))
 
