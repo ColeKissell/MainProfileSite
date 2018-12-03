@@ -5,6 +5,8 @@ import Contact from "../Pages/Contact";
 import ProjectsPage from "../Pages/ProjectsPage";
 // import Home from "../Pages/Home"
 import Resume from '../Pages/Resume';
+// import { Button } from '@material-ui/core';
+import './homePic.css'
 export default class extends Component {
     render() {
         return (
@@ -20,7 +22,7 @@ export default class extends Component {
 }
 
 const Home = () => (
-    <div>
-        <h2>Home</h2>
+    <div css="mainPage">
+        <h2>Hello! My name is Nicole Kissell. Welcome to my site.</h2>
     </div>
 );
