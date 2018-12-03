@@ -135,7 +135,7 @@ class Carosel extends React.PureComponent {
             </Col>
             <Col span={12} style={{ paddingTop: "20px" }}>
                 <RBCarousel version={4} className="carousel-fade">
-                <div style={{ ...styles, backgroundColor: "darkcyan" }}>
+                <div style={{ ...styles, backgroundColor: "skyblue" }}>
                     <div className="carousel-center">
                     <h2>Interests</h2>
                         <ul>

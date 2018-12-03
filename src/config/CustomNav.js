@@ -63,6 +63,7 @@ const styles = theme => ({
     menuButton: {
         marginLeft: 12,
         marginRight: 20,
+        
     },
     hide: {
         display: 'none',
@@ -70,9 +71,11 @@ const styles = theme => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        
     },
     drawerPaper: {
         width: drawerWidth,
+        
     },
     drawerHeader: {
         display: 'flex',
@@ -80,6 +83,7 @@ const styles = theme => ({
         padding: '0 8px',
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
+        
     },
     content: {
         flexGrow: 1,
@@ -90,6 +94,7 @@ const styles = theme => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
         marginLeft: -drawerWidth,
+        
     },
     contentShift: {
         transition: theme.transitions.create('margin', {
