@@ -48,7 +48,8 @@ const styles = theme => ({
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,}),
-            backgroundColor: "skyblue",
+            backgroundColor: 'purple',
+            color: 'white',
             
     },
     appBarShift: {
