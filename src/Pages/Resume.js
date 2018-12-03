@@ -7,7 +7,6 @@ class Resume extends React.Component {
         return(
             <div>
                 <p>Resume coming soon.</p>
-                <p>Resume will be posted soon</p>
                 <object type="application/pdf"
                     data="../../Resume.pdf"
                     width="100%"
