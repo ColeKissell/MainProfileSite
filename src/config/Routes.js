@@ -4,7 +4,6 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import ProjectsPage from "../Pages/ProjectsPage";
 import Resume from '../Pages/Resume';
-import './homePic.css'
 import me from '../Media/KissellFamily2018(71of84).JPG'
 export default class extends Component {
     render() {

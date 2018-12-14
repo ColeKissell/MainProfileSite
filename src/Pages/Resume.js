@@ -1,9 +1,7 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import resume from '../Media/resumeV2Pdf.pdf'
 
 class Resume extends React.Component {
-    /* Put in an object tag to import the pdf. You need to put the resume pdf in the project files  */
     render(){
         return(
             <div>
@@ -16,11 +14,8 @@ class Resume extends React.Component {
                 >
                 </object>
             </div>
-
         )
-        
     }
-
 }
 
 export default Resume;
