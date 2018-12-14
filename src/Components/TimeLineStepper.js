@@ -48,7 +48,7 @@ function getStepContent(step) {
         case 0:
         return getCard(
             "Utah Stars App",
-            "A mobile application for the Utah Stars Team that pulls data from the existing WordPress site.  Conducted research on available technologies and helped set up the ui/ux of the mobile application.",
+            "A mobile application for the Utah Stars Team that pulls data from the existing WordPress site.  Conducted research on available technologies and helped set up the ui/ux of the mobile application.Git Repo will not be availiable",
             "in production still",
             'in production still'
         );
