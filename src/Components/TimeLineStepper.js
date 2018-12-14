@@ -50,7 +50,6 @@ function getStepContent(step) {
             "Utah Stars App",
             "A mobile application for the Utah Stars Team that pulls data from the existing WordPress site.  Conducted research on available technologies and helped set up the ui/ux of the mobile application.Git Repo will not be availiable",
             "in production still",
-            'in production still'
         );
         case 1:
         return getCard(
@@ -70,14 +69,14 @@ function getStepContent(step) {
         return getCard( 
             "Simple Tracker in Vue",
             "A simple app to track the name and description of whatever you want. This was built using Vue, Hapi, Mongoose, and MongoDB. This is part two of my exploration of front end frameworks. Live site coming soon.",
-            "not live yet",
+            null,
             "https://github.com/ColeKissell/vueSimpleTracker"
         );
         case 4:
         return getCard( 
             "Simple Tracker in Angular",
             "A simple app to track the name and description of whatever you want. This was built using Angular, Hapi, Mongoose, and MongoDB. This is part three of my exploration of front end frameworks. Live site coming soon.",
-            "not live yet",
+            null,
             "https://github.com/ColeKissell/simpleTracker"
         );
         default:

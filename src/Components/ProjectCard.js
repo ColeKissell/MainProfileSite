@@ -77,17 +77,20 @@ export class ProjectCard extends React.Component {
             </Typography>
             <Typography variant="paragraph" component="p">
             {this.props.description}
-              <br />
-              the link is:  {this.props.link}
             </Typography>
           </CardContent>
           <CardActions>
-            <a href={this.props.link} target='_blank' rel="noopener noreferrer">
+
+            {this.props.link ? 
+              <a href={this.props.link} target='_blank' rel="noopener noreferrer">
               <Button size="small">Live Site</Button>
-            </a>
-            <a href={this.props.link2} target='_blank' rel="noopener noreferrer">
+              </a> : null
+            }
+            
+            {this.props.link2? <a href={this.props.link2} target='_blank' rel="noopener noreferrer">
               <Button size="small">Git Repo</Button>
-            </a>
+            </a>: null}
+            
           </CardActions>
         </Card>
         );
