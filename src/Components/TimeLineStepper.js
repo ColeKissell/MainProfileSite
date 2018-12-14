@@ -139,8 +139,6 @@ class VerticalLinearStepper extends React.Component {
     handleSkip = () => {
         const { activeStep } = this.state;
         if (!this.isStepOptional(activeStep)) {
-            // You probably want to guard against something like this
-            // it should never occur unless someone's actively trying to break something.
             throw new Error("You can't skip a step that isn't optional.");
         }
 
@@ -161,18 +159,12 @@ class VerticalLinearStepper extends React.Component {
     };
 
     handleComplete = () => {
-        // eslint-disable-next-line react/no-access-state-in-setstate
         const completed = new Set(this.state.completed);
         completed.add(this.state.activeStep);
         this.setState({
             completed,
         });
-    
-        /**
-         * Sigh... it would be much nicer to replace the following if conditional with
-         * `if (!this.allStepsComplete())` however state is not set when we do this,
-         * thus we have to resort to not being very DRY.
-         */
+
         if (completed.size !== this.totalSteps() - this.skippedSteps()) {
             this.handleNext();
         }

@@ -227,7 +227,7 @@ class TimelineV2 extends React.Component {
                     )}
                     {activeStep !== steps.length &&
                       (this.state.completed.has(this.state.activeStep) ? (
-                        <Typography variant="caption" className={classes.completed}>
+                        <Typography className={classes.completed}>
                           Step {activeStep + 1} already completed
                       </Typography>
                       ) : (

@@ -3,10 +3,9 @@ import { Route } from "react-router-dom";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import ProjectsPage from "../Pages/ProjectsPage";
-// import Home from "../Pages/Home"
 import Resume from '../Pages/Resume';
-// import { Button } from '@material-ui/core';
 import './homePic.css'
+import me from '../Media/KissellFamily2018(71of84).JPG'
 export default class extends Component {
     render() {
         return (
@@ -22,7 +21,8 @@ export default class extends Component {
 }
 
 const Home = () => (
-    <div css="mainPage">
+    <div>
         <h2>Hello! My name is Nicole Kissell. Welcome to my site.</h2>
+        <img src={me} alt="" width="100%" height='100%'/>
     </div>
 );
