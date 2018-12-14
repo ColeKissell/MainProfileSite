@@ -40,24 +40,53 @@ const styles = theme => ({
 });
 
 function getSteps() {
-    return ['Start', 'Next', 'In Progress'];
+    return ["Utah Stars App",'Team Show Project', 'Simple Tracker React', 'Simple Tracker Vue', 'Simple Tracker Angular'];
 }
 
 function getStepContent(step) {
     switch (step) {
         case 0:
-        return getCard();
+        return getCard(
+            "Utah Stars App",
+            "A mobile application for the Utah Stars Team that pulls data from the existing WordPress site.  Conducted research on available technologies and helped set up the ui/ux of the mobile application.",
+            "in production still",
+            'in production still'
+        );
         case 1:
-        return getCard();
+        return getCard(
+            "Team Show Project",
+            "A work in progress. We attempted to build a show management system. This is connected to a database and an API.",
+            "https://team-this-store.netlify.com/",
+            'https://github.com/Donohoo13/StoreV4'
+        );
         case 2:
-        return getCard();
+        return getCard(
+            "Simple Tracker in React",
+            "A simple app to track the name and description of whatever you want. This was built using React, Hapi, Mongoose, and MongoDB. This is part one of my exploration of front end frameworks. If the page does not display with individual items in the database reload the page. The API can be found here: https://github.com/ColeKissell/TrackerAPI",
+            "https://fervent-bose-db13b6.netlify.com/",
+            "https://github.com/ColeKissell/simpleTrackerReact"
+        );
+        case 3:
+        return getCard( 
+            "Simple Tracker in Vue",
+            "A simple app to track the name and description of whatever you want. This was built using Vue, Hapi, Mongoose, and MongoDB. This is part two of my exploration of front end frameworks. Live site coming soon.",
+            "not live yet",
+            "https://github.com/ColeKissell/vueSimpleTracker"
+        );
+        case 4:
+        return getCard( 
+            "Simple Tracker in Angular",
+            "A simple app to track the name and description of whatever you want. This was built using Angular, Hapi, Mongoose, and MongoDB. This is part three of my exploration of front end frameworks. Live site coming soon.",
+            "not live yet",
+            "https://github.com/ColeKissell/simpleTracker"
+        );
         default:
         return 'Unknown step';
     }
 }
 
-function getCard() {
-    return <SimpleCard/>;
+function getCard(title, description,link, link2) {
+    return <SimpleCard name={title} description={description} link ={link} link2={link2}/>;
 }
 
 
@@ -203,7 +232,7 @@ class VerticalLinearStepper extends React.Component {
                                             color="primary"
                                             onClick={this.handleNext}
                                             className={classes.button}>
-                                            {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                            {activeStep === steps.length - 1 ? 'Top of List' : 'Next'}
                                         </Button>
                                     </div>
                                 </div>

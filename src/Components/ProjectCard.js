@@ -30,46 +30,70 @@ const styles = {
 // need to add a function to fill out the card based on props passed to the class
 
 
-function SimpleCard(props) {
-  const { classes } = props;
-
-  return (
-    <Card className={classes.card}>
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Team Show Project
-        </Typography>
-        <Typography component="p">
-          A work in progress. We attempted to build a show management system. This is connected to a database and an API.
-          <br />
-          the link is: https://team-this-store.netlify.com/
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <a href="https://team-this-store.netlify.com/" target='_blank' rel="noopener noreferrer">
-          <Button size="small">Learn More</Button>
-        </a>
+// function SimpleCard(props) {
+//   const { classes } = props;
+  
+//   return (
+//     <Card className={classes.card}>
+//       <CardContent>
+//         <Typography className={classes.title} color="textSecondary" gutterBottom>
+//           {this.props.name}
+//         </Typography>
+//         <Typography component="p">
+//         {this.props.description}
+//           <br />
+//           the link is:{this.props.link}
+//         </Typography>
+//       </CardContent>
+//       <CardActions>
+//         <a href={this.porps.link} target='_blank' rel="noopener noreferrer">
+//           <Button size="small">Learn More</Button>
+//         </a>
         
-      </CardActions>
-    </Card>
-  );
-}
+//       </CardActions>
+//     </Card>
+//   );
+// }
 
-SimpleCard.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+// SimpleCard.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
 
 export class ProjectCard extends React.Component {
-    state = {
-        props: { },
-    }
-    render(props) {    
+  constructor(props){
+    super(props)
+    this.state = {
+      props: props,
+  }
+  }
+    
+    render() {   
+       
         return (
-              SimpleCard(props)
+          <Card >
+          <CardContent>
+            <Typography variant='h6' gutterBottom>
+              {this.props.name}
+            </Typography>
+            <Typography variant="paragraph" component="p">
+            {this.props.description}
+              <br />
+              the link is:  {this.props.link}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <a href={this.props.link} target='_blank' rel="noopener noreferrer">
+              <Button size="small">Live Site</Button>
+            </a>
+            <a href={this.props.link2} target='_blank' rel="noopener noreferrer">
+              <Button size="small">Git Repo</Button>
+            </a>
+          </CardActions>
+        </Card>
         );
       }
 
 }
 
 
-export default withStyles(styles)(SimpleCard);
+export default withStyles(styles)(ProjectCard);
