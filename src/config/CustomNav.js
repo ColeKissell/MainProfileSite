@@ -18,14 +18,11 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-// import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-// const theme = createMuiTheme();
 const drawerWidth = 240;
 
 const styles = theme => ({
     typography: {
-        // Use the system font instead of the default Roboto font.
         useNextVariants: true,
         fontFamily: [
           '-apple-system',
