@@ -203,17 +203,13 @@ class TimelineV2 extends React.Component {
                     disabled={activeStep === 0}
                     onClick={this.handleBack}
                     className={classes.button}
-                  >
-                    Back
-                </Button>
+                  >Back</Button>
                   <Button
                     variant="contained"
                     color="primary"
                     onClick={this.handleNext}
                     className={classes.button}
-                  >
-                    Next
-                </Button>
+                  >Next</Button>
                   {this.isStepOptional(activeStep) &&
                     !this.state.completed.has(this.state.activeStep) && (
                       <Button
@@ -221,9 +217,7 @@ class TimelineV2 extends React.Component {
                         color="primary"
                         onClick={this.handleSkip}
                         className={classes.button}
-                      >
-                        Skip
-                    </Button>
+                      >Skip</Button>
                     )}
                     {activeStep !== steps.length &&
                       (this.state.completed.has(this.state.activeStep) ? (

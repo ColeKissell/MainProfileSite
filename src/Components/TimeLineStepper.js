@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import SimpleCard from './ProjectCard';
-
+import StepButton from '@material-ui/core/StepButton';
 
 const styles = theme => ({
     root: {
@@ -42,7 +42,6 @@ const styles = theme => ({
 function getSteps() {
     return ["Utah Stars App",'Team Show Project', 'Simple Tracker React', 'Simple Tracker Vue', 'Simple Tracker Angular'];
 }
-
 function getStepContent(step) {
     switch (step) {
         case 0:
@@ -88,7 +87,6 @@ function getCard(title, description,link, link2) {
     return <SimpleCard name={title} description={description} link ={link} link2={link2}/>;
 }
 
-
 class VerticalLinearStepper extends React.Component {
     state = {
         activeStep: 0,
@@ -119,38 +117,38 @@ class VerticalLinearStepper extends React.Component {
         }));
     };
 
-    handleReset = () => {
-        this.setState({
-        activeStep: 0,
-        completed: new Set(),
-        skipped: new Set(),
-        });
-    };
+    // handleReset = () => {
+    //     this.setState({
+    //     activeStep: 0,
+    //     completed: new Set(),
+    //     skipped: new Set(),
+    //     });
+    // };
 
 
     totalSteps = () => {
         return getSteps().length;
     };
 
-    isStepOptional = step => {
-        return step === 1;
-    };
+    // isStepOptional = step => {
+    //     return step === 1;
+    // };
 
-    handleSkip = () => {
-        const { activeStep } = this.state;
-        if (!this.isStepOptional(activeStep)) {
-            throw new Error("You can't skip a step that isn't optional.");
-        }
+    // handleSkip = () => {
+    //     const { activeStep } = this.state;
+    //     if (!this.isStepOptional(activeStep)) {
+    //         throw new Error("You can't skip a step that isn't optional.");
+    //     }
 
-        this.setState(state => {
-            const skipped = new Set(state.skipped.values());
-            skipped.add(activeStep);
-            return {
-                activeStep: state.activeStep + 1,
-                skipped,
-            };
-        });
-    };
+    //     this.setState(state => {
+    //         const skipped = new Set(state.skipped.values());
+    //         skipped.add(activeStep);
+    //         return {
+    //             activeStep: state.activeStep + 1,
+    //             skipped,
+    //         };
+    //     });
+    // };
 
     handleStep = step => () => {
         this.setState({
@@ -158,29 +156,29 @@ class VerticalLinearStepper extends React.Component {
         });
     };
 
-    handleComplete = () => {
-        const completed = new Set(this.state.completed);
-        completed.add(this.state.activeStep);
-        this.setState({
-            completed,
-        });
+    // handleComplete = () => {
+    //     const completed = new Set(this.state.completed);
+    //     completed.add(this.state.activeStep);
+    //     this.setState({
+    //         completed,
+    //     });
 
-        if (completed.size !== this.totalSteps() - this.skippedSteps()) {
-            this.handleNext();
-        }
-    };
+    //     if (completed.size !== this.totalSteps() - this.skippedSteps()) {
+    //         this.handleNext();
+    //     }
+    // };
 
     skippedSteps() {
         return this.state.skipped.size;
     };
 
-    isStepSkipped(step) {
-        return this.state.skipped.has(step);
-    };
+    // isStepSkipped(step) {
+    //     return this.state.skipped.has(step);
+    // };
 
-    isStepComplete(step) {
-        return this.state.completed.has(step);
-    }
+    // isStepComplete(step) {
+    //     return this.state.completed.has(step);
+    // }
 
     completedSteps() {
         return this.state.completed.size;
@@ -195,6 +193,11 @@ class VerticalLinearStepper extends React.Component {
     }
     
 
+    handleStep = step => () => {
+        this.setState({
+          activeStep: step,
+        });
+      };
 
     render() {
         const { classes } = this.props;
@@ -207,17 +210,27 @@ class VerticalLinearStepper extends React.Component {
                 {steps.map((label, index) => {
                     return (
                         <Step key={label}>
+                            <StepButton
+                            onClick={this.handleStep(index)}
+                            className={classes.button}
+                            >
                             <StepLabel>{label}</StepLabel>
+                            </StepButton>
+                            
+                                
                             <StepContent>
                                 <div>{getStepContent(index)}</div>
                                 <div className={classes.actionsContainer}>
+                                {/* bottom buttons */}
                                     <div>
+                                        {/* back button */}
                                         <Button
                                             disabled={activeStep === 0}
                                             onClick={this.handleBack}
                                             className={classes.button}>
                                             Back
                                         </Button>
+                                        {/* next or to top button */}
                                         <Button
                                             variant="contained"
                                             color="primary"
